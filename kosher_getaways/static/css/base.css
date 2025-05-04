@@ -1,0 +1,21 @@
+:root{
+    --main-font:Playfair Display;
+}
+
+
+h1,p{
+    font-family:var(--main-font);
+    color:#707070;
+    position: relative;
+    right:40px;
+   }
+ 
+ h1{
+    font-size: 1.4rem;
+ }
+ 
+   p{
+    font-size: 0.5rem;
+    position: relative;
+    bottom:10px;
+   }
