@@ -1,0 +1,70 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block meta %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% endblock %}
+
+    {% block corecss%}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% endblock %}
+
+
+    <title>Kosher Getaways{% block extra_title %} {% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container-fluid">
+                <div class="row bottom-bar">
+                    <div class="col-1">
+                        <a href="#">
+                            <img src="{% static 'media/new-logo.png' %}" alt="logo" class="logo">
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <h1><strong>KosherGetaways</strong>.com</h1>
+                        <p>Your Trusted Source for Kosher Holiday Rentals</p>
+                    </div>
+                    <div class="col-7">
+                        <div class="row upper-nav">
+                            <div class="col-3">Explore Rentals</div>
+                            <div class="col-3">List your Property</div>
+                            <div class="col-3"></div>
+                            <div class="col-3">
+                                <div class="sign-in shadow">
+                                    <span class="user-avatar">E</span>
+                                    <div class="member-dropdown shadow" id="drop-down">
+                                        <ul>
+                                            <li>Your Rentals</li>
+                                            <li>Your Booking</li>
+                                            <li>Messages</li>
+                                            <li>Sign Out</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        {% block extra_header %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
