@@ -1,6 +1,17 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block base_filter %}
+<div class="location-date-number-filter shadow">
+    <form action="">
+        <input type="text" placeholder="Location">
+        <input type="text" placeholder="Check in" onfocus="(this.type='date')">
+        <input type="text" placeholder="Check out" onfocus="(this.type='date')">
+        <input type="number" placeholder="Guests">
+    </form>
+</div>
+{% endblock %}
+
 {% block extra_header %}
 <div class="row lower-nav">
     <div class="col-6"></div>
@@ -10,5 +21,19 @@
 </div>
 {% endblock %}
 {% block content%}
-<h2>In smaller hello world</h2>
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-7">
+            </div>
+            <div class="col-5">
+                <img src="{% static 'media/home-garden.jpg' %}" alt="hero image" class="half-hero" id="half-hero">
+                <div class="hero-message" id="hero-message">
+                    <h2>Your perfect getaway</h2>
+                    <h3 id="change">Unwind without compromise</h3>  
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
