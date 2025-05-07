@@ -14,6 +14,7 @@ a:hover{
   font-weight: bolder;
 }
 
+
 .bottom-bar{
   margin-top: 20px;
  }
@@ -118,14 +119,17 @@ li{
 .location-date-number-filter{
   background-color:var(--main-background-color);
   height:50px;
-  width:670px;
+  width:780px;
   border-radius: 25px;
   margin-top: 10px;
-  border: solid #707070 0.3px;
+  border: solid rgba(112, 112, 112, 0.3) 0.3px;
   cursor: pointer;
   position: relative;
+  top:0;
   z-index: 3;
+  left:180px;
 }
+
 
 /* .location-date-number-filter:hover{
   background-color: #fff;
@@ -139,6 +143,8 @@ input{
   height:45px;
   margin:2px;
   border-radius: 25px;
+  text-align: center;
+  margin-left: 20px;
 }
 
 input:hover{
@@ -156,6 +162,64 @@ input[type="text"]{
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.location-box{
+  height:150px;
+  width:420px;
+  margin-left:40px;
+  margin-top: 30px;
+  padding:20px;
+  text-align: center;
+  border-radius: 10px;
+  display: block;
+}
+
+.location-box:hover .location-header{
+  background-color: var(--main-text-color);
+  color:#f7f7f7;
+}
+
+.location-box-lower{
+  color:#303030;
+  height:150px;
+  width:420px;
+  margin-left:5px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding:20px;
+  text-align: center;
+  border-radius: 10px;
+  display: block;
+}
+
+
+#image-1{
+  background-image: url("../media/london-house.jpg");
+  background-size: cover;
+
+}
+#image-2{
+  background-image: url("../media/manchester.jpg");
+  background-size: cover;
+  background-position: center;
+
+}
+#image-3{
+  background-image: url("../media/gateshead-house.jpg");
+  background-size: cover;
+}
+
+.location-header{
+  font-family: var(--main-font);
+  color:var(--main-text-color);
+  background-color: #f7f7f7;
+  border: solid rgba(112, 112, 112, 0.3) 0.3px;
+  width:200px;
+  padding: 5px;
+  position: relative;
+  left:90px;
+  border-radius: 10px;
 }
 
 .half-hero{
