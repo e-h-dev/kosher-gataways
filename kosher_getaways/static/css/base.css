@@ -172,6 +172,8 @@ input::-webkit-inner-spin-button {
   padding:20px;
   text-align: center;
   border-radius: 10px;
+  position: relative;
+  z-index: 1;
   display: block;
 }
 
@@ -220,6 +222,49 @@ input::-webkit-inner-spin-button {
   position: relative;
   left:90px;
   border-radius: 10px;
+}
+
+
+.map-img{
+  position: relative;
+  right:150px;
+  z-index: -1;
+  height:600px;
+  width:600px;
+  object-fit: contain;
+  opacity: 0.5;
+}
+
+#location-pin{
+  position: relative;
+  bottom:200px;
+  left:200px;
+  z-index: -1;
+  height:50px;
+  width:50px;
+  object-fit: contain;
+}
+
+.location-pin{
+  display:none;
+}
+
+.location-header-2{
+  display:none;
+}
+
+#location-header-2{
+  font-family: var(--main-font);
+  color:var(--main-text-color);
+  background-color: #f7f7f7;
+  /* border: solid rgba(112, 112, 112, 0.3) 0.3px; */
+  width:200px;
+  padding: 5px;
+  position: relative;
+  left:250px;
+  top:60px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .half-hero{

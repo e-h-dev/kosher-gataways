@@ -24,15 +24,15 @@
 <section>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-7">
+            <div class="col-4">
                 <div class="row">
                     <div class="col-8">
-                        <a href="" class="location-box" id="image-1">
-                            <h2 class="location-header shadow">London</h2>
+                        <a href="" class="location-box" id="image-1" onmouseover="reveal()" onmouseout="hide()">
+                            <h2 id="location-header" class="location-header shadow">London</h2>
                         </a>
                     </div>
                     <div class="col-4">
-                       <h5>Check out houses available to rent in London</h5>
+                        <h2 id="location-header-2" class="location-header-2 shadow">London</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -56,6 +56,12 @@
                     </div>
                 </div>
             </div>
+            <div class="col-3">  
+               <div class="map-opaque">
+                    <img src="{% static 'media/uk-map.jpg' %}" alt="" class="map-img">
+                    <img src="{% static 'media/location-pin.png' %}" alt="" class="location-pin" id="location-pin">
+               </div>
+            </div>
             <div class="col-5">
                 <img src="{% static 'media/home-garden.jpg' %}" alt="hero image" class="half-hero" id="half-hero">
                 <div class="hero-message" id="hero-message">
@@ -66,21 +72,24 @@
         </div>
     </div>
 </section>
-<h1>Welcome</h1>
-<h1>Welcome</h1>
-<h1>Welcome</h1>
-<h1>Welcome</h1>
-<h1>Welcome</h1>
-<h1>Welcome</h1>
-<h1>Welcome</h1>
-<h1>Welcome</h1>
+{% endblock %}
 
-<h1>Welcome</h1>
-<h1>Welcome</h1>
-<h1>Welcome</h1>
-<h1>Welcome</h1>
-<h1>Welcome</h1>
-<h1>Welcome</h1>
-<h1>Welcome</h1>
+{% block js %}
+<script>
+    var subHeader = document.getElementById('location-header');
+    var subHeader2 = document.getElementById('location-header-2');
+    var locPin = document.getElementById('location-pin');
+    function reveal(){
+        subHeader2.style.display="block";
+        subHeader.style.display="none";
+        locPin.style.display="block";
+    }
 
+    function hide(){
+        subHeader2.style.display="none";
+        subHeader.style.display="block";
+        locPin.style.display="none";
+    }
+
+</script>
 {% endblock %}
