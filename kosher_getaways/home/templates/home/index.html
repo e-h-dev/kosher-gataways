@@ -58,15 +58,17 @@
             </div>
             <div class="col-3">  
                <div class="map-opaque">
-                    <img src="{% static 'media/uk-map.jpg' %}" alt="" class="map-img">
+                    <img src="{% static 'media/map.png' %}" alt="" class="map-img" id="map-image">
                     <img src="{% static 'media/location-pin.png' %}" alt="" class="location-pin" id="location-pin">
                </div>
             </div>
             <div class="col-5">
-                <img src="{% static 'media/home-garden.jpg' %}" alt="hero image" class="half-hero" id="half-hero">
-                <div class="hero-message" id="hero-message">
-                    <h2>Your perfect getaway</h2>
-                    <h3 id="change">Unwind without compromise</h3>  
+                <div id="half-hero">
+                    <img src="{% static 'media/home-garden.jpg' %}" alt="hero image" class="half-hero" id="half-hero">
+                    <div class="hero-message" id="hero-message">
+                        <h2>Your perfect getaway</h2>
+                        <h3 id="change">Unwind without compromise</h3>  
+                    </div>
                 </div>
             </div>
         </div>
@@ -79,10 +81,14 @@
     var subHeader = document.getElementById('location-header');
     var subHeader2 = document.getElementById('location-header-2');
     var locPin = document.getElementById('location-pin');
+    var mapImage = document.getElementById('map-image');
+    var hero = document.getElementById('half-hero');
     function reveal(){
         subHeader2.style.display="block";
         subHeader.style.display="none";
         locPin.style.display="block";
+        mapImage.style.display="block";
+        hero.style.display="none";
     }
 
     function hide(){

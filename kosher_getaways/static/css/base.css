@@ -232,7 +232,11 @@ input::-webkit-inner-spin-button {
   height:600px;
   width:600px;
   object-fit: contain;
-  opacity: 0.5;
+  opacity: 0.2;
+}
+
+#map-image{
+  display:none;
 }
 
 #location-pin{
