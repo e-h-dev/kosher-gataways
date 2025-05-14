@@ -217,7 +217,7 @@ input::-webkit-inner-spin-button {
 .location-header{
   font-family: var(--main-font);
   color:var(--main-text-color);
-  background-color: #f7f7f7;
+  background-color: #fff;
   border: solid rgba(112, 112, 112, 0.3) 0.3px;
   width:200px;
   padding: 5px;
