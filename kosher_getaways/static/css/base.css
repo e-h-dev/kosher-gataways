@@ -21,10 +21,10 @@ a:hover{
 
 .logo{
   position:relative;
-  bottom:30px;
+  bottom:40px;
   z-index:1;
-  width:70px;
-  height:90px;
+  width:100px;
+  height:120px;
   object-fit: contain;
   }
 
@@ -33,7 +33,7 @@ h1,p{
     font-family:var(--main-font);
     color:var(--main-text-color);
     position: relative;
-    right:40px;
+    /* right:60px; */
    }
  
 h1{
