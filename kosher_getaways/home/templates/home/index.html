@@ -26,13 +26,13 @@
         <div class="row">
             <div class="col-4">
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-12">
                         <a href="" class="location-box" id="image-1" onmouseover="reveal()" onmouseout="hide()">
                             <h2 id="location-header" class="location-header shadow">London</h2>
                         </a>
-                    </div>
-                    <div class="col-4">
+                        <div>
                         <h2 id="location-header-2" class="location-header-2 shadow">London</h2>
+                    </div>
                     </div>
                 </div>
                 <div class="row">
@@ -57,10 +57,21 @@
                 </div>
             </div>
             <div class="col-3">  
-               <div class="map-opaque">
-                    <img src="{% static 'media/map.png' %}" alt="" class="map-img" id="map-image">
-                    <img src="{% static 'media/location-pin.png' %}" alt="" class="location-pin" id="location-pin">
-               </div>
+               <div class="row">
+                    <div class="primary-filter-info shadow">
+                        <p>Find your perfect stay currently, <strong>{{ availability }}</strong> rentals are listed in London.</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="primary-filter-info shadow">
+                        <p>Find your perfect stay currently, <strong>{{ availability }}</strong> rentals are listed in Manchester.</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="primary-filter-info shadow">
+                        <p>Find your perfect stay currently, <strong>{{ availability }}</strong> rentals are listed in Gateshead.</p> 
+                    </div>
+                </div>
             </div>
             <div class="col-5">
                 <div id="half-hero">
@@ -70,6 +81,8 @@
                         <h3 id="change">Unwind without compromise</h3>  
                     </div>
                 </div>
+                <img src="{% static 'media/map.png' %}" alt="" class="map-img" id="map-image">
+                <img src="{% static 'media/location-pin.png' %}" alt="" class="location-pin" id="location-pin">
             </div>
         </div>
     </div>

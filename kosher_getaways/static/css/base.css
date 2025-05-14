@@ -36,14 +36,15 @@ h1,p{
     right:40px;
    }
  
- h1{
+h1{
     font-size: 1.4rem;
  }
  
-p{
+.tagline{
     font-size: 0.7rem;
     position: relative;
     bottom:10px;
+    color:#75bba7;
    }
 
 header{
@@ -166,7 +167,7 @@ input::-webkit-inner-spin-button {
 
 .location-box{
   height:150px;
-  width:420px;
+  width:400px;
   margin-left:40px;
   margin-top: 30px;
   padding:20px;
@@ -199,6 +200,7 @@ input::-webkit-inner-spin-button {
 #image-1{
   background-image: url("../media/london-house.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
 
 }
 #image-2{
@@ -224,15 +226,46 @@ input::-webkit-inner-spin-button {
   border-radius: 10px;
 }
 
+.primary-filter-info{
+  position: relative;
+  left:50px;
+  top:50px;
+  background-color: var(--main-background-color);
+  border-radius: 10px;
+  width:70%;
+  margin-bottom: 70px;
+  animation:flash 5s infinite;
+}
+
+@keyframes flash {
+  10%{
+    opacity:0.2;
+  }
+  100%{
+    opacity:1;
+  }
+}
+
+.primary-filter-info p{
+  position: relative;
+  left:20px;
+  font-size: 1.1rem;
+  width:90%;
+  padding: 10px;
+}
+
 
 .map-img{
   position: relative;
-  right:150px;
+  left:100px;
+  /* bottom:0px; */
   z-index: -1;
-  height:600px;
-  width:600px;
+  height:450px;
+  /* width:600px; */
   object-fit: contain;
   opacity: 0.2;
+  /* height:800px; */
+  width:380px;
 }
 
 #map-image{
@@ -240,12 +273,12 @@ input::-webkit-inner-spin-button {
 }
 
 #location-pin{
-  position: relative;
-  bottom:200px;
-  left:200px;
+  position: absolute;
+  top:340px;
+  left:360px;
   z-index: -1;
-  height:50px;
-  width:50px;
+  height:30px;
+  width:30px;
   object-fit: contain;
 }
 
@@ -261,12 +294,11 @@ input::-webkit-inner-spin-button {
   font-family: var(--main-font);
   color:var(--main-text-color);
   background-color: #f7f7f7;
-  /* border: solid rgba(112, 112, 112, 0.3) 0.3px; */
   width:200px;
   padding: 5px;
-  position: relative;
-  left:250px;
-  top:60px;
+  position: absolute;
+  left:950px;
+  bottom:100px;
   border-radius: 10px;
   text-align: center;
 }
@@ -282,7 +314,7 @@ input::-webkit-inner-spin-button {
 }
 
 .hero-message{
-  background-color: rgba(112, 112, 112, 0.3);
+  background-color: rgba(112, 112, 112, 0.2);
   color:#fff;
   position:absolute;
   top: 40%;
