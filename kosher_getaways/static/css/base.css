@@ -115,6 +115,12 @@ li{
   }
 }
 
+footer{
+  background-color: #6c809a;
+  height:200px;
+  position: stickey;
+}
+
 /* home page styles */
 
 .location-date-number-filter{
