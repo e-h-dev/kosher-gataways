@@ -58,7 +58,16 @@
                                         </ul>
                                     </div>
                                     {% else %}
-                                    <i class="fa-regular fa-circle-user"></i>
+                                    <div class="icon">
+                                        <i class="fa-solid fa-circle-user"></i>
+                                    </div>
+                                    <div class="sign-up-dropdown shadow" id="drop-down">
+                                        <ul>
+                                            <li><a href="{% url 'account_login' %}">Login</a></li>
+                                            <li>Register</li>
+                                        </ul>
+                                    </div>
+                                    
                                     {% endif %}
                                 </div>
                             </div>
