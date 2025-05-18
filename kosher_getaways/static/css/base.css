@@ -4,6 +4,13 @@
     --main-background-color:rgba(117, 187, 167, 0.14);
 }
 
+header{
+  position: relative;
+  top:0;
+  z-index:0;
+  background-color: #fff;
+}
+
 a{
   color:var(--main-text-color)
 }
@@ -16,7 +23,7 @@ a:hover{
 
 
 .bottom-bar{
-  margin-top: 20px;
+  padding-top: 20px;
  }
 
 .logo{
@@ -80,7 +87,7 @@ header{
   position: absolute;
   top:40px;
   width:150px;
-  z-index: 9999999999999999;
+  z-index: 3;
   display:none;
   background-color: #fff;
   overflow: hidden;
@@ -118,10 +125,14 @@ li{
 footer{
   background-color: #6c809a;
   height:200px;
-  position: stickey;
+  /* position: stickey; */
 }
 
 /* home page styles */
+
+.home-landing{
+  background-color: #fff;
+}
 
 .location-date-number-filter{
   background-color:var(--main-background-color);
@@ -315,7 +326,8 @@ input::-webkit-inner-spin-button {
   opacity: 0.7;
   border-radius: 10px;
   margin-top: 30px;
-  position:sticky;
+  position:absolute;
+  z-index: 0;
   top:30px;
 }
 
@@ -338,3 +350,24 @@ input::-webkit-inner-spin-button {
 /* .hero-message h3{
   display: none;
 } */
+
+.picture-trans{
+  position: relative;
+  z-index: -1;
+  width:100%;
+  height:700px;
+  opacity: 0.1;
+  background-color: #fff;
+}
+
+.center-image{
+  position: fixed;
+  top:0;
+  left:2.5%;
+  z-index: -1;
+  background-attachment:fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width:95%;
+  height:700px;
+}
