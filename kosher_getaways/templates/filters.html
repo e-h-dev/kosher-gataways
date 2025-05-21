@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block base_filter %}
+<div class="location-date-number-filter shadow">
+    <form action="">
+        <input type="text" placeholder="Location">
+        <input type="text" placeholder="Check in" onfocus="(this.type='date')">
+        <input type="text" placeholder="Check out" onfocus="(this.type='date')">
+        <input type="number" placeholder="Guests">
+    </form>
+</div>
+{% endblock %}
+{% block content%}
+{% endblock %}

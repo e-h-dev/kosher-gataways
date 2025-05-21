@@ -1,29 +1,10 @@
-{% extends "base.html" %}
+{% extends "filters.html" %}
 {% load static %}
 
-{% block base_filter %}
-<div class="location-date-number-filter shadow">
-    <form action="">
-        <input type="text" placeholder="Location">
-        <input type="text" placeholder="Check in" onfocus="(this.type='date')">
-        <input type="text" placeholder="Check out" onfocus="(this.type='date')">
-        <input type="number" placeholder="Guests">
-    </form>
-</div>
-{% endblock %}
 
-{% block extra_header %}
-<!-- <div class="row lower-nav">
-    <div class="col-6"></div>
-    <div class="col-2"><a href="">Home</a></div>
-    <div class="col-2"><a href="">Contact</a></div>
-    <div class="col-2"></div>
-</div> -->
-{% endblock %}
 {% block content%}
 <section>
     <div class="container-fluid">
-        <!-- <div class="home-landing"> -->
         <div class="row home-landing">
             <div class="col-4">
                 <div class="row">
@@ -83,13 +64,9 @@
                 <img src="{% static 'media/map.png' %}" alt="" class="map-img" id="map-image">
                 <img src="{% static 'media/location-pin.png' %}" alt="" class="location-pin" id="location-pin">
             </div>
-        <!-- </div> -->
         </div>
     </div>
 </section>
-<!-- <section>
-    <img src="/static/media/center_fixed_image.jpg" alt="" class="center-image">
-</section> -->
 <section>
         <div class="picture-trans">
             <h1>Hello world!!</h1>
@@ -131,12 +108,10 @@
 {% block js %}
 <script>
     var subHeader = document.getElementById('location-header');
-    //var subHeader2 = document.getElementById('location-header-2');
     var locPin = document.getElementById('location-pin');
     var mapImage = document.getElementById('map-image');
     var hero = document.getElementById('half-hero');
     function reveal(){
-        //subHeader2.style.display="block";
         subHeader.style.display="none";
         locPin.style.display="block";
         mapImage.style.display="block";
@@ -144,7 +119,6 @@
     }
 
     function hide(){
-        //subHeader2.style.display="none";
         subHeader.style.display="block";
         locPin.style.display="none";
     }
