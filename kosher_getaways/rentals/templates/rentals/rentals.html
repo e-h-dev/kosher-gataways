@@ -1,9 +1,10 @@
 {% extends "filters.html" %}
 {% load static %}
 
-{% block extra_title %} - Home {% endblock %}
+{% block extra_title %} - Rentals {% endblock %}
+{% block extra_class%} active{% endblock %}
 {% block content%}
-<section>
+<!-- <section>
     <div class="container-fluid">
         <div class="row home-landing">
             <div class="col-4">
@@ -66,14 +67,14 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <section>
         <div class="picture-trans">
             <h1>Hello world!!</h1>
         </div>
         <img src="/static/media/center_fixed_image_main.jpg" alt="" class="center-image">
 </section>
-<section>
+<!-- <section>
     <div class="featured-rentals">
         <div class="container-fluid">
             <div class="row">
@@ -102,26 +103,9 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 {% endblock %}
 
 {% block js %}
-<script>
-    var subHeader = document.getElementById('location-header');
-    var locPin = document.getElementById('location-pin');
-    var mapImage = document.getElementById('map-image');
-    var hero = document.getElementById('half-hero');
-    function reveal(){
-        subHeader.style.display="none";
-        locPin.style.display="block";
-        mapImage.style.display="block";
-        hero.style.display="none";
-    }
 
-    function hide(){
-        subHeader.style.display="block";
-        locPin.style.display="none";
-    }
-
-</script>
 {% endblock %}
