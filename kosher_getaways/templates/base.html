@@ -43,9 +43,9 @@
                     </div> -->
                     <div class="col-7">
                         <div class="row upper-nav">
-                            <div class="col-3"><a href="">Explore Rentals</a></div>
-                            <div class="col-3"><a href="">List your Home</a></div>
-                            <div class="col-3"><a href="">Contact</a></div>
+                            <div class="col-3"><a href="" class="top-nav-link">Explore Rentals</a></div>
+                            <div class="col-3"><a href="" class="top-nav-link">List your Home</a></div>
+                            <div class="col-3"><a href="" class="top-nav-link">Contact</a></div>
                             <div class="col-3">
                                 <div class="sign-in-box shadow">
                                     {% if request.user.is_authenticated %}
@@ -57,7 +57,7 @@
                                             <li>Your Rentals</li>
                                             <li>Your Booking</li>
                                             <li>Messages</li>
-                                            <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
+                                            <li><a href="{% url 'account_logout' %}" class="top-nav-link">Sign Out</a></li>
                                         </ul>
                                     </div>
                                     {% else %}
@@ -91,17 +91,37 @@
     </section> -->
     {% block js %}
     {% endblock %}
+    <div class="footer-border"></div>
     <footer>
         <div class="container-fluid">
-            <div class="row">
+            <div class="row top-footer-row">
             <div class="col-4">
-                <img src="/static/media/logo_2.png" alt="" class="logo">
+                <img src="/static/media/footer-logo.png" alt="" class="footer-logo">
+                <p class="footer-logo-p"><strong>KosherGetaways</strong></p>
+                <p class="footer-logo-p2">Your Trusted Source for Kosher Holiday Rentals</p>
+                <p class="footer-row-1">Copyright 2025</p>
+                <p class="footer-row-1">Website by <a href="https://e-hammond-7f6468517ddb.herokuapp.com/" class="bottom-nav-link" target="_blank">ehstackdevs.ltd</a></p>
             </div>
             <div class="col-4">
-                <h3>Rentals</h3>
+                <h3 class="text-center">Menu</h3>
+                <ul class="footer-list">
+                    <li><a href="" class="bottom-nav-link">Home</a></li>
+                    <li>Explore Rentals</li>
+                    <li>List Your Home</li>
+                    {% if request.user.is_authenticated %}
+                    <li><a href="{% url 'account_logout' %}" class="bottom-nav-link">Sign Out</a></li>
+                    {% else %}
+                    <li><a href="{% url 'account_login' %}" class="bottom-nav-link">Sign in</a> / <a href="" class="bottom-nav-link">Register</a></li>
+                    {% endif %}
+                </ul>
             </div>
             <div class="col-4">
-                <h3>Contact</h3>
+                <h3 class="text-center">Contact</h3>
+                <ul class="footer-list">
+                    <li>Tell: 0161 792 1234</li>
+                    <li><a href="" class="bottom-nav-link">info@koshergetaways.co.uk</a></li>
+                    <li><a href="" class="bottom-nav-link">Leave a Message</a></li>
+                </ul>
             </div>
         </div>
         </div>
