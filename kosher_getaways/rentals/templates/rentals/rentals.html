@@ -4,6 +4,41 @@
 {% block extra_title %} - Rentals {% endblock %}
 {% block extra_class%} active{% endblock %}
 {% block content%}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3">
+            <aside>
+                <h3>Filter <i class="fa-solid fa-filter"></i></h3>
+                <div class="filters">
+                    <ul>
+                        <li>Price from till</li>
+                        <li>Learning room</li>
+                        <li>ensuit</li>
+                        <li>barbeque</li>
+                        <li>milky oven</li>
+                        <li>hot tub</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+        <div class="col-9">
+            {% for r in rentals %}
+            <div class="row">
+                <div class="col-3">
+                    <div class="rental-header">{{ r.name }}</div>
+                    <a href="{% url 'home' %}">
+                        <img src="{{ r.image.url }}" alt="" class="featured-image">
+                    </a>
+                    <div class="description">{{ r.description }}</div>
+                    <!-- <div class="number-of-rooms">5 bedrooms</div> -->
+                    <div class="price">£{{ r.price }} per night</div>
+                    <div class="rating">{{ r.rating }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 <!-- <section>
     <div class="container-fluid">
         <div class="row home-landing">
@@ -68,12 +103,12 @@
         </div>
     </div>
 </section> -->
-<section>
+<!-- <section>
         <div class="picture-trans">
             <h1>Hello world!!</h1>
         </div>
         <img src="/static/media/center_fixed_image_main.jpg" alt="" class="center-image">
-</section>
+</section> -->
 <!-- <section>
     <div class="featured-rentals">
         <div class="container-fluid">

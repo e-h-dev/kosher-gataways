@@ -1,7 +1,10 @@
 from django.shortcuts import render
+from .models import Rentals
 
 # Create your views here.
 
 
 def rentals(request):
-    return render(request, 'rentals/rentals.html')
+
+    rentals = Rentals.objects.all()
+    return render(request, 'rentals/rentals.html', {"rentals": rentals})
