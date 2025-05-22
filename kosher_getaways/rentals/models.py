@@ -22,7 +22,7 @@ class Rentals(models.Model):
     description = models.TextField()
     mini_description = models.TextField(max_length=100)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    image = models.ImageField(null=True, blank=True)
+    # image = models.ImageField(null=True, blank=True)
     available_from = models.DateField()
     available_till = models.DateField()
     rating = models.IntegerField(default=1,
@@ -31,3 +31,9 @@ class Rentals(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Image(models.Model):
+    name = models.ForeignKey('Rentals', null=True, blank=True,
+                             on_delete=models.SET_NULL)
+    image = models.ImageField(null=True, blank=True)

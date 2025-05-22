@@ -27,7 +27,9 @@
                 <div class="col-3">
                     <div class="rental-header">{{ r.name }}</div>
                     <a href="{% url 'home' %}">
-                        <img src="{{ r.image.url }}" alt="" class="featured-image">
+                        {% for i in image %}
+                        <img src="{{ i.image.url }}" alt="" class="featured-image">
+                        {% endfor %}
                     </a>
                     <div class="description">{{ r.description }}</div>
                     <!-- <div class="number-of-rooms">5 bedrooms</div> -->
