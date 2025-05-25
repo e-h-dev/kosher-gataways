@@ -22,22 +22,33 @@
             </aside>
         </div>
         <div class="col-9">
-            {% for r in rentals %}
             <div class="row">
+                {% for r in rentals %}
                 <div class="col-3">
                     <div class="rental-header">{{ r.name }}</div>
+                    
+                    
                     <a href="{% url 'home' %}">
                         {% for i in image %}
+                        <h1>{{ i.id }}</h1>
+                        <h1>{{ r.id }}</h1>
+                        {% if r_id is i_nm %}
                         <img src="{{ i.image.url }}" alt="" class="featured-image">
+                        {% endif %}
                         {% endfor %}
                     </a>
+                    
                     <div class="description">{{ r.description }}</div>
                     <!-- <div class="number-of-rooms">5 bedrooms</div> -->
                     <div class="price">£{{ r.price }} per night</div>
                     <div class="rating">{{ r.rating }}</div>
+                    <div class="availability">
+                        available from {{ r.available_from}}
+                        till {{ r.available_till }}
+                    </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
 </div>
