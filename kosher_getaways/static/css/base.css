@@ -5,10 +5,11 @@
 }
 
 header{
-  position: relative;
   top:0;
   z-index:0;
   background-color: #fff;
+  color:var(--main-text-color);
+  font-family: var(--main-font);
 }
 
 .active{
@@ -63,10 +64,6 @@ h1{
     color:#75bba7;
    }
 
-header{
-    color:var(--main-text-color);
-    font-family: var(--main-font);
-   }
 
 .upper-nav{
   margin-top: 20px;
