@@ -15,7 +15,6 @@ def rentals(request):
 
     image_name = Image.objects.values_list('name')
 
-    
     print(image_name)
 
     # for r_id in rental_id:

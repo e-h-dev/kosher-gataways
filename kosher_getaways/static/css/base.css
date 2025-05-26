@@ -232,7 +232,8 @@ footer{
 .home-landing{
   background-color: #fff;
   position:relative;
-  z-index: -2;
+  /* z-index: -2; */
+  z-index: 1;
   height:690px;
   border-bottom-left-radius: 40%;
   border-bottom-right-radius: 40%;

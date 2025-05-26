@@ -24,14 +24,12 @@
         <div class="col-9">
             <div class="row">
                 {% for r in rentals %}
-                <div class="col-3">
+                <div class="col-4">
                     <div class="rental-header">{{ r.name }}</div>
                     
                     
                     <a href="{% url 'home' %}">
                         {% for i in image %}
-                        <h1>{{ i.id }}</h1>
-                        <h1>{{ r.id }}</h1>
                         {% if r_id is i_nm %}
                         <img src="{{ i.image.url }}" alt="" class="featured-image">
                         {% endif %}
