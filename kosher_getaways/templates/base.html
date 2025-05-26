@@ -92,8 +92,7 @@
         <div class="picture-trans"></div>
         <img src="/static/media/center_fixed_image.jpg" alt="" class="center-image">
     </section> -->
-    {% block js %}
-    {% endblock %}
+    
     <div class="footer-border"></div>
     <footer>
         <div class="container-fluid">
@@ -129,5 +128,17 @@
         </div>
         </div>
     </footer>
+    {% block js %}
+    
+    {% endblock %}
+    <script>
+        $( function() {
+    $( "#datepicker-in" ).datepicker();
+  } );
+
+  $( function() {
+    $( "#datepicker-out" ).datepicker();
+  } );
+    </script>
 </body>
 </html>

@@ -518,3 +518,25 @@ input::-webkit-inner-spin-button {
   margin-left: 80px;;
 }
 
+/* styles to customise jQuery date picker */
+
+table{
+  font-family: var(--main-font);
+}
+
+thead{
+  background-color: var(--main-background-color);
+}
+
+.ui-datepicker-header{
+  font-family: var(--main-font);
+  color:#f6f6f6 !important;
+  background-color: var(--main-text-color) !important;
+}
+
+
+#ui-datepicker-div{
+  border:solid 1px var(--main-text-color);
+  border-radius: 20px;
+}
+
