@@ -54,7 +54,7 @@
                     <img src="{% static 'media/home-garden.jpg' %}" alt="hero image" class="half-hero" id="half-hero">
                     <div class="hero-message" id="hero-message">
                         <h2>Your perfect getaway</h2>
-                        <h3 id="change">Unwind without compromise</h3>  
+                        <!-- <h3 id="change">Unwind without compromise</h3>   -->
                     </div>
                 </div>
                 <img src="{% static 'media/map.png' %}" alt="" class="map-img" id="map-image">
@@ -65,7 +65,10 @@
 </section>
 <section>
         <div class="picture-trans">
-            <h1>Hello world!!</h1>
+            <div class="scroll-down-hero-message" id="scroll-down-hero-message">
+                <h2>Your perfect getaway</h2>
+                <h3 id="change">Unwind without compromise</h3>
+            </div>
         </div>
         <img src="/static/media/center_fixed_image_main.jpg" alt="" class="center-image">
 </section>
@@ -117,6 +120,35 @@
     function hide(){
         subHeader.style.display="block";
         locPin.style.display="none";
+        mapImage.style.display="none";
+        hero.style.display="block";
     }
+
+    var element = document.getElementById("hero-message");
+        window.onscroll = function() {myFunction()};
+        
+        function myFunction() {
+          if (document.documentElement.scrollTop > 350) {
+            document.getElementById("scroll-down-hero-message").style.display = "block";
+            document.getElementById("half-hero").style.opacity = "1";
+            document.getElementById("hero-message").style.display = "none"
+            // document.getElementById("image-3").style.backgroundImage = `url("images/london-house.jpg")`;
+            // document.getElementById("image-1").style.backgroundImage = `url("images/gateshead-house.jpg")`;
+            // document.getElementById("slide-remove").style.display = "none"
+            // document.getElementById("slide-appear").style.display = "block"
+            // .classList.add("update-pos")
+
+          } else {
+            document.getElementById("scroll-down-hero-message").style.display = "none";
+            document.getElementById("half-hero").style.opacity = "0.7";
+            document.getElementById("hero-message").style.display = "block"
+            // document.getElementById("image-1").style.backgroundImage = `url("images/london-house.jpg")`;
+            // document.getElementById("image-3").style.backgroundImage = `url("images/gateshead-house.jpg")`;
+            // document.getElementById("slide-remove").style.display = "block"
+            // document.getElementById("slide-appear").style.display = "none"
+            // element.idList.remove("update-pos")
+          }
+
+        }
 </script>
 {% endblock %}

@@ -436,25 +436,51 @@ input::-webkit-inner-spin-button {
   top:30px;
 }
 
-.hero-message{
+.hero-message, .scroll-down-hero-message{
   background-color: rgba(112, 112, 112, 0.1);
   color:#fff;
   position:absolute;
-  top: 30%;
+  top: 40%;
   text-align: center;
   border-radius: 10px;
   font-family: Playfair Display;
-  width:500px;
   font-style: italic;
+}
+
+.hero-message{
+  width:500px;
+}
+
+.new-hero-message{
+  animation: fade-out 1s;
+  
+}
+
+@keyframes fade-out {
+  0%{
+    display: block;
+  }
+  50%{
+    display: none;
+  }
 }
 
 .hero-message h2{
   font-size: 3rem;
 }
 
-/* .hero-message h3{
-  display: none;
-} */
+.scroll-down-hero-message{
+  width:700px;
+}
+
+.scroll-down-hero-message h2{
+  font-size: 4rem;
+}
+
+.scroll-down-hero-message h3{
+  font-size: 2rem;
+}
+
 
 .picture-trans{
   position: relative;
@@ -477,6 +503,24 @@ input::-webkit-inner-spin-button {
   height:100vh;
 }
 
+.scroll-down-hero-message{
+  position: absolute;
+  animation: slide-across 7s infinite;
+  display:none;
+}
+
+@keyframes slide-across {
+  0%{
+    left:0px
+  }
+  50%{
+    left:600px;
+  }
+  100%{
+    left: 0px;
+  }
+}
+
 .featured-rentals{
   font-family: var(--main-font);
   background-color: #fff;
@@ -485,8 +529,9 @@ input::-webkit-inner-spin-button {
   bottom: -150px;
   border-top-left-radius: 40%;
   border-top-right-radius: 40%;
+  /* border-top: 5px solid var(--main-text-color); */
   height:500px;
-  padding-top: 100px;
+  padding-top: 40px;
 }
 
 .featured-rentals h4{
