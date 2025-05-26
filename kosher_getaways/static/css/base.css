@@ -300,7 +300,7 @@ input::-webkit-inner-spin-button {
   display: block;
 }
 
-.location-box:hover .location-header{
+.location-header{
   background-color: var(--main-text-color);
   color:#f7f7f7;
 }
@@ -394,17 +394,29 @@ input::-webkit-inner-spin-button {
   display:none;
 }
 
-#location-pin{
+#location-pin-lon{
   position: absolute;
   top:340px;
   left:360px;
+}
+
+#location-pin-manch{
+  position: absolute;
+  top:255px;
+  left:310px;
+}
+
+#location-pin-ghd{
+  position: absolute;
+  top:190px;
+  left:340px;
+}
+
+.location-pin{
   z-index: -1;
   height:30px;
   width:30px;
   object-fit: contain;
-}
-
-.location-pin{
   display:none;
 }
 
@@ -437,9 +449,8 @@ input::-webkit-inner-spin-button {
 }
 
 .hero-message, .scroll-down-hero-message{
-  background-color: rgba(112, 112, 112, 0.1);
   color:#fff;
-  position:absolute;
+  /* position:absolute; */
   top: 40%;
   text-align: center;
   border-radius: 10px;
@@ -449,6 +460,8 @@ input::-webkit-inner-spin-button {
 
 .hero-message{
   width:500px;
+  position: absolute;
+  background-color: rgba(112, 112, 112, 0.1);
 }
 
 .new-hero-message{
@@ -469,9 +482,10 @@ input::-webkit-inner-spin-button {
   font-size: 3rem;
 }
 
-.scroll-down-hero-message{
+/* .scroll-down-hero-message{
   width:700px;
-}
+  position:fixed
+} */
 
 .scroll-down-hero-message h2{
   font-size: 4rem;
@@ -504,7 +518,8 @@ input::-webkit-inner-spin-button {
 }
 
 .scroll-down-hero-message{
-  position: absolute;
+  position: fixed;
+  width:700px;
   animation: slide-across 7s infinite;
   display:none;
 }
