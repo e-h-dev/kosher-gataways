@@ -35,5 +35,6 @@ class Rentals(models.Model):
 
 class Image(models.Model):
     name = models.ForeignKey('Rentals', null=True, blank=True,
-                             on_delete=models.SET_NULL)
+                             on_delete=models.CASCADE)
     image = models.ImageField(null=True, blank=True)
+    # key = models.CharField(name, max_length=50)

@@ -28,11 +28,11 @@
                     <div class="rental-header">{{ r.name }}</div>
                     
                     
-                    <a href="{% url 'home' %}">
+                    <a href="{% url 'rental_detail' r.id %}">
                         {% for i in image %}
-                        {% if r_id is i_nm %}
+                        
                         <img src="{{ i.image.url }}" alt="" class="featured-image">
-                        {% endif %}
+                        
                         {% endfor %}
                     </a>
                     
