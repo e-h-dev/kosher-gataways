@@ -7,11 +7,16 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-3">
-            <aside>
+            <aside class="filters">
                 <h3>Filter <i class="fa-solid fa-filter"></i></h3>
-                <div class="filters">
+                <div>
                     <ul>
-                        <li>Price from till</li>
+                        <li>
+                            <div class="slidecontainer">
+                                <label for="myRange">£150</label>
+                                <input type="range" min="50" max="1000" value="20" class="slider shadow" id="myRange">
+                            </div>
+                        </li>
                         <li>Learning room</li>
                         <li>ensuit</li>
                         <li>barbeque</li>
@@ -24,25 +29,34 @@
         <div class="col-9">
             <div class="row">
                 {% for r in rentals %}
+                
                 <div class="col-4">
-                    <div class="rental-header">{{ r.name }}</div>
+                    <div class="rental-display-box shadow">
+                        <div class="rental-header">{{ r.name }}</div>
                     
-                    
-                    <a href="{% url 'rental_detail' r.id %}">
-                        {% for i in image %}
+                        <a href="{% url 'rental_detail' r.id %}">
+                            {% for i in image %}
+                            
+                            <!-- <img src="{{ i.image.url }}" alt="{{ i.name }}" class="featured-image"> -->
+                            <img src="" alt="{{ i.name }}" class="featured-image">
+                            
+                            {% endfor %}
+                        </a>
                         
-                        <img src="{{ i.image.url }}" alt="" class="featured-image">
-                        
-                        {% endfor %}
-                    </a>
-                    
-                    <div class="description">{{ r.description }}</div>
-                    <!-- <div class="number-of-rooms">5 bedrooms</div> -->
-                    <div class="price">£{{ r.price }} per night</div>
-                    <div class="rating">{{ r.rating }}</div>
-                    <div class="availability">
-                        available from {{ r.available_from}}
-                        till {{ r.available_till }}
+                        <div class="description">{{ r.mini_description }}</div>
+                        <!-- <div class="number-of-rooms">5 bedrooms</div> -->
+                         <hr>
+                        <div class="price">
+                            <i class="fa-solid fa-tags"></i>
+                            £{{ r.price }} per night
+                        </div>
+                        <hr>
+                        <div class="rating">Rating: {{ r.rating }}</div>
+                        <hr>
+                        <div class="availability">
+                            Available from {{ r.available_from}}
+                            till {{ r.available_till }}
+                        </div>
                     </div>
                 </div>
                 {% endfor %}
