@@ -35,6 +35,8 @@ class Rentals(models.Model):
 
 class Image(models.Model):
     name = models.ForeignKey('Rentals', null=True, blank=True,
-                             on_delete=models.CASCADE)
+                             on_delete=models.CASCADE, related_name='images')
     image = models.ImageField(null=True, blank=True)
-    # key = models.CharField(name, max_length=50)
+   
+    def __str__(self):
+        return f'Image for {self.name.name}'

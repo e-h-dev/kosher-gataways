@@ -35,11 +35,8 @@
                         <div class="rental-header">{{ r.name }}</div>
                     
                         <a href="{% url 'rental_detail' r.id %}">
-                            {% for i in image %}
-                            
-                            <!-- <img src="{{ i.image.url }}" alt="{{ i.name }}" class="featured-image"> -->
-                            <img src="" alt="{{ i.name }}" class="featured-image">
-                            
+                            {% for i in r.images.all %}
+                            <img src="{{ i.image.url }}" alt="{{ i.name }}" class="featured-image">
                             {% endfor %}
                         </a>
                         

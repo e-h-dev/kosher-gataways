@@ -13,9 +13,9 @@
         <div class="col-4"></div>
     </div>
     <div class="row">
-        {% for i in image %}
+        {% for i in rental.images.all %}
         <div class="gallery">
-            <img src="" alt="{{ rental.name }}" class="gallery-images">
+            <img src="{{ i.image.url }}" alt="{{ rental.name }}" class="gallery-images">
         </div>
         {% endfor %}
     </div>
