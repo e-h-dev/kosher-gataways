@@ -8,8 +8,11 @@ def rentals(request):
 
     rentals = Rentals.objects.prefetch_related('images').all()
 
+    rental_number = rentals.count()
+
     context = {
         "rentals": rentals,
+        "rental_number": rental_number
         }
     return render(request, 'rentals/rentals.html', context)
 
