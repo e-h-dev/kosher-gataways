@@ -5,10 +5,13 @@
 {% block extra_class%} active{% endblock %}
 {% block content%}
 <div class="container-fluid">
+    <h3 class="filters-header">Filters 
+        <i class="fa-solid fa-ellipsis-vertical filter-icon" onclick="openFilter()"></i><i class="fa-solid fa-xmark filter-icon-close" onclick="closeFilter()"></i>
+    </h3>
     <div class="row">
-        <div class="col-3">
+        <div class="col-3 filter-content">
             <aside class="filters">
-                <h3>Filter <i class="fa-solid fa-filter"></i></h3>
+                <!-- <h3 onclick="openFilter()">Filter <i class="fa-solid fa-filter"></i></h3> -->
                 <div>
                     <ul>
                         <li>
@@ -27,6 +30,7 @@
             </aside>
         </div>
         <div class="col-9">
+            <p class="rental-count">Found <strong>{{ rental_number }} </strong> Rentals.</p>
             <div class="row">
                 {% for r in rentals %}
                 
@@ -108,6 +112,18 @@
 {% block js %}
 
 <script>
+    function openFilter(){
+        $('.filter-content').css("display", "block");
+        $('.filter-icon').css("display", "none");
+        $('.filter-icon-close').css("display", "block");
+    }
+
+    function closeFilter(){
+        $('.filter-content').css("display", "none");
+        $('.filter-icon').css("display", "block");
+        $('.filter-icon-close').css("display", "none");
+    }
+
     {% for r in rentals %}
     let slideIndex{{ r.id }} = 1;
     showSlides{{ r.id }}(slideIndex{{ r.id }});

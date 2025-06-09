@@ -133,11 +133,15 @@
     {% endblock %}
     <script>
         $( function() {
-    $( "#datepicker-in" ).datepicker();
+    $( "#datepicker-in" ).datepicker({
+        dateFormat: 'dd-mm-yy',
+    });
   } );
 
   $( function() {
-    $( "#datepicker-out" ).datepicker();
+    $( "#datepicker-out" ).datepicker({
+        dateFormat: 'dd-mm-yy',
+    });
   } );
     </script>
 </body>

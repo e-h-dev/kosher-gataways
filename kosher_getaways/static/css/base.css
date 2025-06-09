@@ -590,15 +590,48 @@ thead{
 }
 
 .ui-datepicker-header{
+  height:30px;
+}
+
+.ui-datepicker-header{
   font-family: var(--main-font);
   color:#f6f6f6 !important;
   background-color: var(--main-text-color) !important;
+  height:30px;
+  border-radius: 10px;
 }
 
+.ui-datepicker-header, .ui-widget-header, .ui-helper-clearfix, .ui-corner-all{
+  height:40px;
+  border-radius: 10px;
+}
 
 #ui-datepicker-div{
-  border:solid 1px var(--main-text-color);
-  border-radius: 20px;
+  width:420px;
+  height:410px;
+  border:solid 1px var(--main-background-color);
+  border-radius: 10px;
+  padding:10px;
+  background-color: #fff;
+  margin-top: 10px;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight{
+  background: var(--main-text-color) !important;
+  border:1px solid white !important;
+  color: white !important;
+  height:50px;
+  width:50px;
+  border-radius: 10px;
+}
+
+.ui-state-default{
+  background: var(--main-background-color) !important;
+  height:50px !important;
+  width:50px !important;
+  text-align: center !important;
+  padding-top: 12px !important;
+  border-radius: 10px;
 }
 
 /* explore rentals page */
@@ -622,6 +655,34 @@ thead{
   color:var(--main-text-color);
   font-family: var(--main-font);
   text-align: justify;
+}
+
+.filter-content{
+  display:none;
+}
+
+.filters-header{
+  font-family: var(--main-font);
+  color:var(--main-text-color);
+}
+
+.filter-icon, .filter-icon-close{
+  font-size: 1rem;
+  background-color: var(--main-background-color);
+  width:30px;
+  height:30px;
+  border-radius: 50%;
+  padding-left: 13px;
+  padding-top: 6px;
+  cursor: pointer;
+}
+
+.filter-icon-close{
+  display: none;
+}
+
+.filter-icon:hover, .filter-icon-close:hover{
+  background-color: #f7f7f7;
 }
 
 .description{
@@ -700,5 +761,44 @@ thead{
 .prev:hover, .next:hover{
   background-color: var(--main-background-color);
 }
+
+/* rental details page */
+
+.gallery{
+  width:100%;
+  position: relative;
+  /* background-color: var(--main-background-color); */
+  padding:30px;
+  /* border-radius: 20px; */
+}
+
+.gallery-images{
+  height:200px;
+  width:300px;
+  /* margin:10px; */
+  border-radius: 20px;
+}
+
+.gallery-link{
+  text-decoration: none;
+  color:var(--main-text-color);
+  font-family: var(--main-font);
+  font-size: 1.rem;
+  background-color: var(--main-background-color);
+  padding: 15px;
+  position: relative;
+  bottom:45px;
+  left:15px;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+.gallery-link:hover{
+  text-decoration: none;
+  color:#f7f7f7;
+  background-color: var(--main-text-color);
+}
+
+
 
 
