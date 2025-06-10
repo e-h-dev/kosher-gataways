@@ -764,19 +764,22 @@ thead{
 
 /* rental details page */
 
-.gallery{
-  width:100%;
-  position: relative;
-  /* background-color: var(--main-background-color); */
-  padding:30px;
-  /* border-radius: 20px; */
+.picture-gallery{
+  display:none;
 }
 
 .gallery-images{
-  height:200px;
-  width:300px;
-  /* margin:10px; */
-  border-radius: 20px;
+  height:300px;
+  width:450px;
+  position: relative;
+}
+
+.gallery-image-left{
+  border-radius: 20px 0 0 20px;
+}
+
+.gallery-image-right{
+  border-radius: 0 20px 20px 0;
 }
 
 .gallery-link{
@@ -791,6 +794,7 @@ thead{
   left:15px;
   font-weight: 700;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .gallery-link:hover{
