@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %} - List Home {% endblock %}
+{% block extra_class%} active{% endblock %}
+{% block content%}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <h1 class="center">Fill in the Form below to list your home</h1>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <form action="">
+                <input type="text" i="location" placeholder="Location">
+            </form>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
+{% endblock %}

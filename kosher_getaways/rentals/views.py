@@ -26,3 +26,7 @@ def rental_detail(request, rental_id):
         "image": image
         }
     return render(request, 'rentals/rental_detail.html', context)
+
+
+def list_home(request):
+    return render(request, 'rentals/list_home.html')

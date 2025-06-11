@@ -47,7 +47,7 @@
                     <div class="col-7">
                         <div class="row upper-nav">
                             <div class="col-3"><a href="{% url 'rentals' %}" class="top-nav-link{% block extra_class%}{% endblock %}">Explore Rentals</a></div>
-                            <div class="col-3"><a href="" class="top-nav-link">List your Home</a></div>
+                            <div class="col-3"><a href="{% url 'list_home' %}" class="top-nav-link">List your Home</a></div>
                             <div class="col-3"><a href="" class="top-nav-link">Contact</a></div>
                             <div class="col-3">
                                 <div class="sign-in-box shadow">
@@ -109,7 +109,7 @@
                 <ul class="footer-list">
                     <li><a href="{% url 'home' %}" class="bottom-nav-link">Home</a></li>
                     <li><a href="{% url 'rentals' %}" class="bottom-nav-link">Explore Rentals</a></li>
-                    <li>List Your Home</li>
+                    <li><a href="{% url 'list_home' %}" class="bottom-nav-link">List Your Home</a></li>
                     {% if request.user.is_authenticated %}
                     <li><a href="{% url 'account_logout' %}" class="bottom-nav-link">Sign Out</a></li>
                     {% else %}
