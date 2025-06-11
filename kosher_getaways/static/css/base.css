@@ -4,6 +4,10 @@
     --main-background-color:rgba(117, 187, 167, 0.14);
 }
 
+hr{
+  border: 0.8px rgba(112, 112, 112, 0.2) solid;
+}
+
 header{
   top:0;
   z-index:0;
@@ -764,7 +768,38 @@ thead{
 
 /* rental details page */
 
+.main-container{
+  position:relative;
+  bottom:50px;
+}
+
+.rental-detail-header{
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.rental-detail-sub-header{
+  font-family: var(--main-font);
+  color:var(--main-text-color);
+  padding-left: 20px;
+}
+
+.icon-detail-section{
+  color:var(--main-text-color);
+  font-size: 1.1rem;
+  font-family: var(--main-font);
+}
+
 .picture-gallery{
+  background-color: rgba(0, 0, 0, 0.7);
+  position:fixed;
+  z-index: 999999999999;
+  top:-100px;
+  height:150vh;
+  width:100%;
+  color:#fff;
+  font-size: 5rem;
+  font-weight: bolder;
   display:none;
 }
 
@@ -774,12 +809,18 @@ thead{
   position: relative;
 }
 
+.gallery-images:hover{
+  filter:grayscale(100%);
+}
+
 .gallery-image-left{
   border-radius: 20px 0 0 20px;
+  border-right: 4px solid #fff;
 }
 
 .gallery-image-right{
   border-radius: 0 20px 20px 0;
+  border-left: 4px solid #fff;
 }
 
 .gallery-link{
@@ -801,6 +842,32 @@ thead{
   text-decoration: none;
   color:#f7f7f7;
   background-color: var(--main-text-color);
+}
+
+.about-container{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  position: absolute;
+  bottom:-120px;
+}
+
+.description-container h3{
+  padding-bottom: 20px;
+}
+
+
+.availability-container{
+  position:sticky;
+  top:80px;
+  width:30%;
+  height:300px;
+  left:60%;
+  border-radius: 20px;
+  z-index: 5;
+  background-color: #fff;
 }
 
 

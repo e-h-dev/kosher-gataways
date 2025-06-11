@@ -4,27 +4,29 @@
 {% block extra_title %} - {{ rental.name }} {% endblock %}
 {% block extra_class%} active{% endblock %}
 {% block content%}
-<div class="container-fluid picture-gallery">
+<hr style="width:80%; bottom:50px; position: relative;">
+<div class="container-fluid picture-gallery" onclick="remove()">
     <div class="row">
         {% for i in rental.images.all %}
-        <div class="col-6">
+        <!-- <div class="col-6">
             <img src="{{ i.image.url }}" alt="{{ rental.name }}">
-        </div>
+        </div> -->
+       
         {% endfor %}
     </div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid main-container">
     <div class="row">
         <div class="col-4"></div>
         <div class="col-4">
-            <h1 style="text-align: center;">{{ rental.name }}</h1>
+            <h1 class="rental-detail-header mb-3">{{ rental.name }}</h1>
         </div>
         <div class="col-4"></div>
     </div>
     <div class="row">
         <div class="col-2"></div>
         <div class="col-8">
-            <div class="row">
+            <div class="row" onclick="bringBack()">
                 {% for i in rental.images.all|slice:":2" %}
                 <div class="col-6">
                     <img src="{{ i.image.url }}" alt="{{ rental.name }}"
@@ -36,15 +38,79 @@
         <div class="col-2"></div>
     </div>
     <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8">
-            {{ rental.description }}
+        <div class="col-6">
+            <h3 class="rental-detail-sub-header mt-3">{{ rental.mini_description }}</h3>
         </div>
-        <div class="col-2"></div>
+        <div class="col-6 icon-detail-section">
+            <div class="row mt-4">
+                <div class="col-4"><i class="fa-solid fa-people-roof"></i> Guests</div>
+                <div class="col-4"><i class="fa-solid fa-bed"></i> Bedrooms</div>
+                <div class="col-4"><i class="fa-solid fa-bath"></i> Bathrooms</div>
+            </div>
+        </div>
     </div>
+    <hr style="width:80%; position: relative;">
 </div>
+<div class="availability-container shadow" id="availability">
+    Availability
+</div>
+<section>
+    <div class="about-container">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-6 description-container mt-5">
+                <h3 class="rental-detail-sub-header mt-2">
+                    About
+                </h3>
+                <p>{{ rental.description }}</p>
+            </div>
+            <hr style="width:40%; margin-left:130px">
+            <div class="col-4">
+                    
+                </div>
+            <div class="col-1"></div>
+        </div>
+</section>
+<section>
+    <div class="container-fluid">
+        <div class="col-6 map-holder">
+            <div id="googleMap" class="shadow" style="width:100%;height:400px; border-radius: 20px;"></div>
+        </div>
+        <div class="col-6"></div>
+    </div>
+</section>
 {% endblock %}
 
 {% block js %}
+<script>
+    function bringBack(){
+        $('.picture-gallery').css('display', 'block')
+    }
+    function remove(){
+        $('.picture-gallery').css('display', 'none')
+    }
+
+    window.onscroll = function() {makeRelative()};
+
+    function makeRelative(){
+        if (document.documentElement.scrollTop > 950){
+            document.getElementById('availability').style.display="none"
+        }
+        else{
+            document.getElementById('availability').style.display="block"
+        }
+        
+    }
+
+    function myMap() {
+    var mapProp= {
+    center:new google.maps.LatLng(56.374008575563224, -5.439820257253337),
+    zoom:14,
+    };
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB38HKwvjPICAVNqPTWByyVThCfTOfwY6U&callback=myMap"></script>
 
 {% endblock %}
