@@ -47,8 +47,9 @@
                     <div class="col-7">
                         <div class="row upper-nav">
                             <div class="col-3"><a href="{% url 'rentals' %}" class="top-nav-link{% block extra_class%}{% endblock %}">Explore Rentals</a></div>
-                            <div class="col-3"><a href="{% url 'list_home' %}" class="top-nav-link">List your Home</a></div>
-                            <div class="col-3"><a href="" class="top-nav-link">Contact</a></div>
+                            <div class="col-3"><a href="{% url 'list_home' %}" class="top-nav-link{% block extra_class_list%}{% endblock %}">List your Home</a></div>
+                            <div class="col-2"><a href="" class="top-nav-link">Contact</a></div>
+                            <div class="col-1">{% block extra_nav%}{% endblock %}</div>
                             <div class="col-3">
                                 <div class="sign-in-box shadow">
                                     {% if request.user.is_authenticated %}
