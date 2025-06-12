@@ -8,6 +8,10 @@ hr{
   border: 0.8px rgba(112, 112, 112, 0.2) solid;
 }
 
+.center{
+  text-align: center;
+}
+
 header{
   top:0;
   z-index:0;
@@ -877,6 +881,15 @@ thead{
   border-radius: 20px;
   z-index: 5;
   background-color: #fff;
+}
+
+/* list your homr page */
+
+.list-form-input{
+  border: 1px var(--main-text-color) solid;
+  background-color: var(--main-background-color);
+  font-family: var(--main-font);
+  width:600px !important;
 }
 
 

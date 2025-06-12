@@ -14,13 +14,74 @@
         <div class="col-3"></div>
     </div>
     <div class="row">
-        <div class="col-3"></div>
-        <div class="col-6">
-            <form action="">
-                <input type="text" i="location" placeholder="Location">
-            </form>
+        <div class="col-2"></div>
+        <div class="col-8">
+            <div class="form-container shadow" id="form-container">
+                <form action="">
+                <input type="text" id="name" placeholder="Your name" class="list-form-input">
+                <input type="number" id="phone" placeholder="Phone number" class="list-form-input">
+                <input type="email" id="email" placeholder="Email" class="list-form-input">
+                <input type="text" id="address" placeholder="Your Adrress" class="list-form-input">
+                <input type="text" id="post_code" placeholder="Your Post Code" class="list-form-input">
+                <p>
+                    <label for="diffrent-address">Are you are lising a diffrent home?</label>
+                    <input type="checkbox" id="diffrent-address" class="list-form-input">
+                </p>
+                <select name="town" id="town" class="list-form-input">
+                    <option>Location</option>
+                    <option value="london">London</option>
+                    <option value="manchester">Manchester</option>
+                    <option value="gateshead">Gateshead</option>
+                </select>
+                <input type="text" id="house_name" placeholder="name of house" class="list-form-input">
+                <input type="text" id="title" placeholder="house title" class="list-form-input">
+                <input type="number" id="sleeps" placeholder="Sleeps" class="list-form-input">
+                <input type="number" id="bedrooms" placeholder="Bedrooms" class="list-form-input">
+                <input type="number" id="bathrooms" placeholder="Bathrooms" class="list-form-input">
+                <div id="amenity-lists">
+                    <input type="list" name="items[]" id="amenities" placeholder="Amenities" class="list-form-input">
+                    <button type="button" onclick="addInput()" style="position:absolute; bottom:0;">Add another item</button>
+                </div>
+                <input type="text" id="house_name" placeholder="name of house" class="list-form-input">
+                
+                <strike>
+                    name
+                phone
+                email
+                address
+                post code
+                town
+                name of house
+                title
+                sleeps
+                Bedrooms
+                Bathrooms
+                list of amenities
+                </strike>
+                
+                available from
+                available till
+                added on
+                description
+                price per night
+                add images
+                </form>
+            </div>
         </div>
-        <div class="col-3"></div>
+        <div class="col-2"></div>
     </div>
 </div>
+{% endblock %}
+{% block js %}
+<script>
+    function addInput(){
+        let extraForm = document.getElementById('amenity-lists');
+        let newInput = document.createElement('input');
+        newInput.type = 'text';
+        newInput.name = 'items[]';
+        newInput.placeholder = 'Enter another Item';
+        newInput.className = 'list-form-input';
+        extraForm.appendChild(newInput);
+    }
+</script>
 {% endblock %}
