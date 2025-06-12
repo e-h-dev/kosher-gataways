@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from .models import Rentals, Image
 
 # Create your views here.
@@ -28,5 +29,6 @@ def rental_detail(request, rental_id):
     return render(request, 'rentals/rental_detail.html', context)
 
 
+@login_required
 def list_home(request):
     return render(request, 'rentals/list_home.html')
