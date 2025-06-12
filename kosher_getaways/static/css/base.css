@@ -257,6 +257,18 @@ footer{
   left:320px;
 }
 
+.search-icon{
+  width: 20px; 
+  position:relative; 
+  bottom:37px; 
+  left:745px;
+}
+
+.fa-magnifying-glass:hover{
+  color: rgb(117, 187, 167);
+}
+
+
 
 /* .location-date-number-filter:hover{
   background-color: #fff;
@@ -282,9 +294,6 @@ input[type="text"]{
   width: 150px;
 }
 
-/* input[type="date"]{
-  appearance: none;
-} */
 
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
