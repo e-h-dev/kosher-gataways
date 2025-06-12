@@ -6,13 +6,17 @@
 {% block content%}
 <div class="container-fluid">
     <h3 class="filters-header">Filters 
-        <i class="fa-solid fa-ellipsis-vertical filter-icon" onclick="openFilter()"></i><i class="fa-solid fa-xmark filter-icon-close" onclick="closeFilter()"></i>
+        <i class="fa-solid fa-ellipsis-vertical filter-icon" onclick="openFilter()"></i>
+        <!-- <i class="fa-solid fa-xmark filter-icon-close" onclick="closeFilter()"></i> -->
     </h3>
     <div class="row">
         <div class="col-3 filter-content">
             <aside class="filters">
                 <!-- <h3 onclick="openFilter()">Filter <i class="fa-solid fa-filter"></i></h3> -->
                 <div>
+                    <div class="close-btn" onclick="closeFilter()">
+                        X
+                    </div>
                     <ul>
                         <li>
                             <div class="slidecontainer">
@@ -114,14 +118,14 @@
 <script>
     function openFilter(){
         $('.filter-content').css("display", "block");
-        $('.filter-icon').css("display", "none");
-        $('.filter-icon-close').css("display", "block");
+        // $('.filter-icon').css("display", "none");
+        // $('.filter-icon-close').css("display", "block");
     }
 
     function closeFilter(){
         $('.filter-content').css("display", "none");
-        $('.filter-icon').css("display", "block");
-        $('.filter-icon-close').css("display", "none");
+        // $('.filter-icon').css("display", "block");
+        // $('.filter-icon-close').css("display", "none");
     }
 
     {% for r in rentals %}
