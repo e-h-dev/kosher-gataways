@@ -23,21 +23,22 @@
                 <input type="email" id="email" placeholder="Email" class="list-form-input">
                 <input type="text" id="address" placeholder="Your Adrress" class="list-form-input">
                 <input type="text" id="post_code" placeholder="Your Post Code" class="list-form-input">
-                <p>
-                    <label for="diffrent-address">Are you are lising a diffrent home?</label>
-                    <input type="checkbox" id="diffrent-address" class="list-form-input">
-                </p>
                 <select name="town" id="town" class="list-form-input">
                     <option>Location</option>
                     <option value="london">London</option>
                     <option value="manchester">Manchester</option>
                     <option value="gateshead">Gateshead</option>
                 </select>
-                <input type="text" id="house_name" placeholder="name of house" class="list-form-input">
-                <input type="text" id="title" placeholder="house title" class="list-form-input">
-                <input type="number" id="sleeps" placeholder="Sleeps" class="list-form-input">
-                <input type="number" id="bedrooms" placeholder="Bedrooms" class="list-form-input">
-                <input type="number" id="bathrooms" placeholder="Bathrooms" class="list-form-input">
+                <p>
+                    <label for="diffrent-address">Are you are lising a diffrent home?</label>
+                    <input type="checkbox" id="diffrent-address" class="list-form-input" onclick="anotherHome()">
+                </p>
+                
+                <input type="text" id="house_name" placeholder="name of house" class="list-form-input second-list">
+                <input type="text" id="title" placeholder="house title" class="list-form-input second-list">
+                <input type="number" id="sleeps" placeholder="Sleeps" class="list-form-input second-list">
+                <input type="number" id="bedrooms" placeholder="Bedrooms" class="list-form-input second-list">
+                <input type="number" id="bathrooms" placeholder="Bathrooms" class="list-form-input second-list">
                 <div id="amenity-lists">
                     <input type="list" name="items[]" id="amenities" placeholder="Amenities" class="list-form-input">
                     <button type="button" onclick="addInput()" style="position:absolute; bottom:0;">Add another item</button>
@@ -74,6 +75,10 @@
 {% endblock %}
 {% block js %}
 <script>
+    function anotherHome(){
+        $('.second-list').css('display', 'block')
+    }
+
     function addInput(){
         let extraForm = document.getElementById('amenity-lists');
         let newInput = document.createElement('input');

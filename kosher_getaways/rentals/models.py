@@ -23,7 +23,7 @@ class Rentals(models.Model):
     owner_post_code = models.CharField(max_length=100, null=True, blank=True)
     location = models.ForeignKey('Location', null=True, blank=True,
                                  on_delete=models.SET_NULL)
-    house_name = models.CharField(max_length=254, null=True, blank=True)
+    name = models.CharField(max_length=254, null=True, blank=True)
     title = models.TextField(max_length=100)
     sleeps = models.IntegerField(default=2)
     bedrooms = models.IntegerField(default=1)
@@ -37,8 +37,8 @@ class Rentals(models.Model):
                                  choices=((i, i) for i in range(1, 6)))
     review = models.TextField(max_length=600, null=True, blank=True)
 
-    def __str__(self):
-        return self.name
+    # def __str__(self):
+    #     return self.name
 
 
 class Image(models.Model):
@@ -47,5 +47,5 @@ class Image(models.Model):
     image = models.ImageField(null=True, blank=True)
     image_name = models.CharField(max_length=24, null=True, blank=True)
    
-    def __str__(self):
-        return f'Image for {self.name.name}'
+    # def __str__(self):
+    #     return f'Image for {self.name.name}'
