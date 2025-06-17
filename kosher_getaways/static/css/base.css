@@ -904,7 +904,15 @@ thead{
     width:40px;
   }
 
+  /* when user signed in */
+
   .user-avatar{
+    margin-left: 4px;
+ }
+
+ /* when no user signr in */
+
+ .icon{
     margin-left: 4px;
  }
 
@@ -921,6 +929,10 @@ thead{
  }
 
  .sign-in-box:hover .user-avatar{
+  right:0;
+ }
+
+ .sign-in-box:hover .icon{
   right:0;
  }
 
@@ -950,6 +962,16 @@ thead{
      height:120px;
   }
  }
+
+ /* filter bar */
+  .location-date-number-filter{
+    width:750px;
+    left:20px;
+  }
+
+  .search-icon{
+    left:715px;
+  }
 }
 
 
