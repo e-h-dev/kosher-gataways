@@ -273,12 +273,6 @@ footer{
 }
 
 
-
-/* .location-date-number-filter:hover{
-  background-color: #fff;
-} */
-
-
 input{
   border: none;
   outline: none;
@@ -899,6 +893,11 @@ thead{
 
 /* media queries */
 @media screen and (max-width:850px){
+
+  .logo{
+    margin-left:10px;
+  }
+
   .sign-in-box{
     margin-left: 320px;
     width:40px;
@@ -921,7 +920,7 @@ thead{
   font-size: 1.8rem;
   position:relative;
   bottom:40px;
-  width:200px;
+  width:20px;
  }
 
  .mobile-nav-content{
@@ -965,13 +964,46 @@ thead{
 
  /* filter bar */
   .location-date-number-filter{
-    width:750px;
-    left:20px;
+    width:550px;
+    left:100px;
+    background-color:rgb(229, 243, 248);
+    top: 20px;
+  }
+
+  input[type="text"],
+  input[type="number"]{
+    width: 100px;
+    font-size: 0.8rem;
   }
 
   .search-icon{
-    left:715px;
+    left:515px;
   }
+
+  /* index.html styles */
+  .half-hero{
+    height:600px;
+    width:100%;
+    opacity: 0.7;
+    border-radius: 0;
+    margin-top: 0;
+    position:relative;
+    top:-90px;
+  }
+
+  .hero-message, .scroll-down-hero-message{
+    top: 20%;
+    text-align: center;
+    margin-left: 120px;
+  }
+
+  .hero-message{
+    width:500px;
+    position: absolute;
+    background-color: rgba(112, 112, 112, 0.4);
+  }
+
+
 }
 
 

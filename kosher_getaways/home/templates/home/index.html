@@ -6,7 +6,7 @@
 <section>
     <div class="container-fluid">
         <div class="row home-landing">
-            <div class="col-4">
+            <div class="col-lg-4 d-lg-block d-none">
                 <div class="row">
                     <div class="col-12">
                         <a href="{% url 'rentals' %}" class="location-box shadow" id="image-1" onmouseover="revealLon()" onmouseout="hideLon()">
@@ -32,7 +32,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3">  
+            <div class="col-3 d-lg-block d-none">  
                <div class="row">
                     <div class="primary-filter-info shadow">
                         <p>Find your perfect stay currently, <strong>{{ availability }}</strong> rentals are listed in London.</p> 
@@ -49,12 +49,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-5">
+            <div class="col-lg-5 col-md-12">
                 <div id="half-hero">
                     <img src="{% static 'media/home-garden.jpg' %}" alt="hero image" class="half-hero" id="half-hero">
                     <div class="hero-message" id="hero-message">
                         <h2>Your perfect getaway</h2>
-                        <!-- <h3 id="change">Unwind without compromise</h3>   -->
+                        <h3 class="d-lg-none d-md-block">Unwind without compromise</h3>  
                     </div>
                 </div>
                 <img src="{% static 'media/map.png' %}" alt="" class="map-img" id="map-image">
@@ -65,6 +65,7 @@
         </div>
     </div>
 </section>
+<!-- fixed image in middle of home page with tagline -->
 <section>
         <div class="picture-trans">
             <div class="scroll-down-hero-message" id="scroll-down-hero-message">
@@ -74,7 +75,7 @@
         </div>
         <img src="/static/media/center_fixed_image_main.jpg" alt="" class="center-image d-none d-lg-block">
 </section>
-<section>
+<section class="d-lg-block d-md-none">
     <div class="featured-rentals">
         <div class="container-fluid">
             <div class="row">
