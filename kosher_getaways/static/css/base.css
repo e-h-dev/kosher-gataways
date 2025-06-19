@@ -85,13 +85,14 @@ h1{
     /* padding-right: 8px; */
     border-radius: 20px;
     cursor: pointer;
-    border: solid #707070 0.3px;
+    border: solid rgba(112, 112, 112, 0.5) 2px;
  }
 
  .icon, .user-avatar{
     border-radius: 50%;
     display:flex;
-    margin-left: 65px;
+    margin-left: 63px;
+    margin-bottom: 3px;
     height:30px;
     width:30px;
  }
@@ -104,7 +105,7 @@ h1{
  
 .user-avatar{
     color:#fff;
-    background-color: green;
+    background-image: linear-gradient(to right, rgba(117, 187, 167, 0.8), #6c809a, var(--main-text-color));
     font-size: 1.2rem;
     padding-left:9px;
  }
@@ -132,12 +133,12 @@ li{
 
 .sign-in-box:hover .user-avatar{
   position: relative;
-  right:62px;
+  right:60px;
 }
 
 .sign-in-box:hover .icon{
   position: relative;
-  right:62px;
+  right:58px;
 }
 
 .sign-in-box:hover .member-dropdown{
@@ -455,6 +456,8 @@ input::-webkit-inner-spin-button {
   border-radius: 20px;
   margin-top: 30px;
   position:relative;
+  right:0;
+  left:0;
   z-index: 0;
   top:30px;
 }
@@ -894,6 +897,13 @@ thead{
 /* media queries */
 @media screen and (max-width:850px){
 
+  .bottom-bar{
+    position: fixed;
+    z-index: 99999999999999999999999;
+    background-color: #fff;
+    height:120px;
+  }
+
   .logo{
     margin-left:10px;
   }
@@ -901,12 +911,15 @@ thead{
   .sign-in-box{
     margin-left: 320px;
     width:40px;
+    background-color: transparent;
+    border: none;
   }
 
   /* when user signed in */
 
   .user-avatar{
     margin-left: 4px;
+    margin-top: 3px;
  }
 
  /* when no user signr in */
@@ -943,7 +956,7 @@ thead{
   z-index: 5;
   overflow: hidden;
   background-color: #fff;
-  right:160px;
+  right:-20px;
   width:200px;
  }
 
@@ -968,6 +981,13 @@ thead{
     left:100px;
     background-color:rgb(229, 243, 248);
     top: 20px;
+    position:relative !important;
+  }
+
+  .location-date-number-filter-top-nav-mobile{
+    position: relative;
+    z-index: 99999999999999999999999;
+    right:300px;
   }
 
   input[type="text"],
@@ -981,14 +1001,23 @@ thead{
   }
 
   /* index.html styles */
+  .home-landing{
+    height:1500px;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+  }
+
   .half-hero{
     height:600px;
     width:100%;
     opacity: 0.7;
+    left:-5px;
     border-radius: 0;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
     margin-top: 0;
     position:relative;
-    top:-90px;
+    top:100px;
   }
 
   .hero-message, .scroll-down-hero-message{
@@ -1001,6 +1030,10 @@ thead{
     width:500px;
     position: absolute;
     background-color: rgba(112, 112, 112, 0.4);
+  }
+
+  .scroll-down-hero-message{
+    color:black;
   }
 
 

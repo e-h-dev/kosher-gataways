@@ -36,8 +36,9 @@
                         <a href="{% url 'home' %}">
                             <img src="{% static 'media/logo_3.png' %}" alt="logo" class="logo">
                         </a>
-                        {% block base_filter %}
-                        {% endblock %}
+                        <div class="filter-container">
+                            {% include 'filters.html' %}
+                        </div>
                     </div>
                     <!-- <div class="col-4 title_filter">
                         <h1><strong>KosherGetaways</strong>.com</h1>
@@ -51,10 +52,10 @@
                             <div class="col-2 d-lg-block d-none"><a href="" class="top-nav-link">Contact</a></div>
                             <div class="col-1 d-lg-block d-none">{% block extra_nav%}{% endblock %}</div>
                             <div class="col-lg-3 col-md-12">
-                                <div class="sign-in-box shadow">
+                                <div class="sign-in-box">
                                     {% if request.user.is_authenticated %}
                                     
-                                    <span class="user-avatar">E</span>
+                                    <span class="user-avatar">{{ user.username|first|capfirst }}</span>
                                     <div class="member-dropdown shadow" id="drop-down">
                                         <ul>
                                             <li style="text-align: center;">Welcome <strong>{{ user.username }}!</strong></li>
@@ -79,6 +80,9 @@
                                     {% endif %}
                                 </div>
                                 <div class="nav-dropdown d-lg-none d-md-block">
+                                    <!-- <div class="filter-top-mobile">
+                                        {% include 'filters_mobile.html' %}
+                                    </div> -->
                                     <i class="fa-solid fa-bars"></i>
                                     <div class="mobile-nav-dropdown shadow" id="dropdown">
                                         {% include 'includes/mobile_nav.html' %}
