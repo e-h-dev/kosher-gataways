@@ -899,9 +899,10 @@ thead{
 
   .bottom-bar{
     position: fixed;
-    z-index: 99999999999999999999999;
+    z-index:3;
     background-color: #fff;
     height:120px;
+    width:100%;
   }
 
   .logo{
@@ -976,18 +977,37 @@ thead{
  }
 
  /* filter bar */
-  .location-date-number-filter{
+  .location-date-number-filter-mobile{
     width:550px;
     left:100px;
     background-color:rgb(229, 243, 248);
     top: 20px;
-    position:relative !important;
+    position:relative;
+    height:50px;
+    border-radius: 25px;
+    margin-top: 10px;
+    border: solid rgba(112, 112, 112, 0.3) 0.3px;
+    cursor: pointer;
+    bottom:40px;
+    z-index: 3;
   }
 
-  .location-date-number-filter-top-nav-mobile{
-    position: relative;
-    z-index: 99999999999999999999999;
-    right:300px;
+  .remove{
+    display:none;
+    color:red;
+  }
+
+  .filter-top-nav-mobile{
+    width:45px;
+    border:1px solid var(--main-background-color);
+    border-radius: 50%;
+    background-color:rgb(229, 243, 248);
+    position: absolute;
+    z-index: 99999999999999999999;
+    padding:10px;
+    text-align: center;
+    right:350px;
+    bottom:40px;
   }
 
   input[type="text"],
