@@ -57,6 +57,7 @@
                         <h3 class="d-lg-none d-md-block">Unwind without compromise</h3>  
                     </div>
                 </div>
+                {% include 'mobile-image-links.html' %}
                 <img src="{% static 'media/map.png' %}" alt="" class="map-img" id="map-image">
                 <img src="{% static 'media/location-pin.png' %}" alt="" class="location-pin" id="location-pin-lon">
                 <img src="{% static 'media/location-pin.png' %}" alt="" class="location-pin" id="location-pin-manch">
@@ -64,6 +65,7 @@
             </div>
         </div>
     </div>
+    
 </section>
 <!-- fixed image in middle of home page with tagline -->
 <section>
@@ -159,12 +161,13 @@
         hero.style.display="block";
     }
 
-    var element = document.getElementById("hero-message");
+    var heroMessage = document.getElementById("hero-message");
         window.onscroll = function() {myFunction()};
         
         function myFunction() {
           if (document.documentElement.scrollTop > 350) {
             document.getElementById("scroll-down-hero-message").style.display = "block";
+            heroMessage.style.color = "red"
             document.getElementById("half-hero").style.opacity = "1";
             document.getElementById("hero-message").style.display = "none"
             // document.getElementById("image-3").style.backgroundImage = `url("images/london-house.jpg")`;
@@ -174,7 +177,7 @@
             // .classList.add("update-pos")
 
           } else {
-            document.getElementById("scroll-down-hero-message").style.display = "none";
+            //document.getElementById("scroll-down-hero-message").style.display = "none";
             document.getElementById("half-hero").style.opacity = "0.7";
             document.getElementById("hero-message").style.display = "block"
             // document.getElementById("image-1").style.backgroundImage = `url("images/london-house.jpg")`;

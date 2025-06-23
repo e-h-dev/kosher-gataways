@@ -107,7 +107,7 @@
     </section> -->
     
     <div class="footer-border"></div>
-    <!-- <footer>
+    <footer>
         <div class="container-fluid">
             <div class="row top-footer-row">
             <div class="col-4">
@@ -140,7 +140,7 @@
             </div>
         </div>
         </div>
-    </footer> -->
+    </footer>
     {% block js %}
     
     {% endblock %}
@@ -152,7 +152,7 @@
         
         function filterRemove() {
           if (document.documentElement.scrollTop > 80) {
-            mainFilter.className = "remove";
+            mainFilter.className = "remove d-none";
             topFilter.className = "filter-top-nav-mobile shadow"
             searchIcon.style.display = "none";
           } else {
