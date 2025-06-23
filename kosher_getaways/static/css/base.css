@@ -171,6 +171,13 @@ li{
   }
 }
 
+.filter-container{
+  background-color: #fff;
+  position: relative;
+  height:50px;
+  margin-top:-10px;
+}
+
 footer{
   background-color: #6c809a;
   height:340px;
@@ -977,6 +984,14 @@ thead{
  }
 
  /* filter bar */
+ .filter-container{
+    background-color: transparent;
+    position: fixed;
+    height:50px;
+    top:120px;
+    z-index: 3;
+  }
+
   .location-date-number-filter-mobile{
     width:550px;
     left:100px;
@@ -989,7 +1004,7 @@ thead{
     border: solid rgba(112, 112, 112, 0.3) 0.3px;
     cursor: pointer;
     bottom:40px;
-    z-index: 3;
+    
   }
 
   .remove{

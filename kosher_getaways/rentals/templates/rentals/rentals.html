@@ -4,6 +4,9 @@
 {% block extra_title %} - Rentals {% endblock %}
 {% block extra_class%} active{% endblock %}
 {% block content%}
+<div class="filter-container">
+    {% include 'filters.html' %}
+</div>
 <div class="container-fluid">
     <h3 class="filters-header">Filters 
         <i class="fa-solid fa-ellipsis-vertical filter-icon" onclick="openFilter()"></i>
