@@ -21,8 +21,8 @@ class Rentals(models.Model):
     owner_email = models.EmailField(null=True, blank=True)
     owner_address = models.CharField(max_length=100, null=True, blank=True)
     owner_post_code = models.CharField(max_length=100, null=True, blank=True)
-    location = models.ForeignKey('Location', null=True, blank=True,
-                                 on_delete=models.SET_NULL)
+    # location = models.ForeignKey('Location', null=True, blank=True,
+    #                             on_delete=models.SET_NULL)
     name = models.CharField(max_length=254, null=True, blank=True)
     title = models.TextField(max_length=100)
     sleeps = models.IntegerField(default=2)
