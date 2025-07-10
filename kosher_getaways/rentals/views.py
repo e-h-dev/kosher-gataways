@@ -52,7 +52,8 @@ def list_home(request):
             print("your rental is invalid")
             print(form.errors)
             print(image_form.errors)
-            return redirect('rentals')
+            
+        return redirect('rentals')
 
     else:
         form = RentalForm()
