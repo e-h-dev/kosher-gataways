@@ -21,9 +21,6 @@ class Rentals(models.Model):
     owner_email = models.EmailField(null=True, blank=True)
     owner_address = models.CharField(max_length=100, null=True, blank=True)
     owner_post_code = models.CharField(max_length=100, null=True, blank=True)
-    # location = models.ForeignKey('Location', null=True, blank=True,
-    #                             on_delete=models.SET_NULL)
-    name = models.CharField(max_length=254, null=True, blank=True)
     title = models.TextField(max_length=100)
     sleeps = models.IntegerField(default=2)
     bedrooms = models.IntegerField(default=1)
@@ -42,8 +39,7 @@ class Rentals(models.Model):
 
 
 class Image(models.Model):
-    name = models.ForeignKey('Rentals', null=True, blank=True,
-                             on_delete=models.CASCADE, related_name='images')
+    name = models.ForeignKey('Rentals', on_delete=models.CASCADE, related_name='images')
     image = models.ImageField(null=True, blank=True)
     image_name = models.CharField(max_length=24, null=True, blank=True)
    

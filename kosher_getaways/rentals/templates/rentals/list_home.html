@@ -19,6 +19,7 @@
             <div class="form-container shadow" id="form-container">
                 <form action="{% url 'list_home' %}" method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
+                    <!-- {{ form.as_p }} -->
                     <input type="text" id="id_name" name="owner_name" placeholder="Your name" class="list-form-input">
                     <input type="number" id="id_phone" name="owner_number" placeholder="Phone number" class="list-form-input">
                     <input type="email" id="id_email" name="owner_email" placeholder="Email" class="list-form-input">
@@ -40,6 +41,8 @@
                     <input type="date" id="available_till" name="available_till" placeholder="available till" class="list-form-input">
                     <input type="text" id="description" name="description" placeholder="Description" class="list-form-input">
                     <input type="number" id="rating" name="rating" placeholder="rating" class="list-form-input">
+                    <input type="text" id="image_id" name="rental" placeholder="image id">
+                    <input type="file" id="image" name="image" class="list-form-input" placeholder="upload your image">
                     <button type="submit">List your Home</button>
                 </form>
             </div>

@@ -782,7 +782,7 @@ thead{
   background-color: var(--main-background-color);
 }
 
-/* rental details page */
+/* ------------------------------------------------rental details page */
 
 .main-container{
   position:relative;
@@ -886,7 +886,27 @@ thead{
   background-color: #fff;
 }
 
-/* list your homr page */
+.rental-detail-image-display{
+  position: relative;
+  top:200px;
+  height:250px;
+  width:400px;
+  margin:1px;
+  border-radius: 10px;
+}
+
+.image-name{
+  font-family: var(--main-font);
+  color:#fff;
+  position: relative;
+  top:200px;
+  background-color: #000;
+  width:400px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* -------------------------------------list your homr page */
 
 .list-form-input{
   border: 1px var(--main-text-color) solid;

@@ -43,7 +43,7 @@
                 
                 <div class="col-4">
                     <div class="rental-display-box shadow">
-                        <div class="rental-header">{{ r.name }}</div>
+                        <div class="rental-header">{{ r.owner_name }}</div>
                         <a href="{% url 'rental_detail' r.id %}">
                             
                                 {% for i in r.images.all %}
