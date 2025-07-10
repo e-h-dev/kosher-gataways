@@ -36,12 +36,12 @@
                 </div>
             </aside>
         </div>
-        <div class="col-9">
+        <div class="col-12" id="row-change">
             <p class="rental-count">Found <strong>{{ rental_number }} </strong> Rentals.</p>
             <div class="row">
                 {% for r in rentals %}
                 
-                <div class="col-4">
+                <div class="col-3 column-change">
                     <div class="rental-display-box shadow">
                         <div class="rental-header">{{ r.owner_name }}</div>
                         <a href="{% url 'rental_detail' r.id %}">
@@ -121,14 +121,18 @@
 <script>
     function openFilter(){
         $('.filter-content').css("display", "block");
-        // $('.filter-icon').css("display", "none");
-        // $('.filter-icon-close').css("display", "block");
+        $('#row-change').removeClass("col-12");
+        $('.column-change').removeClass("col-3");
+        $('#row-change').addClass("col-9");
+        $('.column-change').addClass("col-4");
     }
 
     function closeFilter(){
         $('.filter-content').css("display", "none");
-        // $('.filter-icon').css("display", "block");
-        // $('.filter-icon-close').css("display", "none");
+        $('#row-change').removeClass("col-9");
+        $('.column-change').removeClass("col-4");
+        $('#row-change').addClass("col-12");
+        $('.column-change').addClass("col-3");
     }
 
     {% for r in rentals %}
