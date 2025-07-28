@@ -1128,7 +1128,16 @@ thead{
     color:black;
   }
 
+  /* rentals page */
+  .mobile-top-spacer{
+    height:250px;
+  }
 
+  .featured-image{
+    width:200px;
+    height:220px;
+    
+  }
 }
 
 
