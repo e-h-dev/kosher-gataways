@@ -7,7 +7,8 @@
 
 {% block content %}
 
-<h1>{% trans "Sign In" %}</h1>
+<div class="sign-box shadow">
+  <h1>{% trans "Sign In" %}</h1>
 
 {% get_providers as socialaccount_providers %}
 
@@ -43,4 +44,5 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
 </form>
 
+</div>
 {% endblock %}

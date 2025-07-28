@@ -921,6 +921,38 @@ thead{
   display:none;
 }
 
+/* -------------------------------------------------sign up etc */
+.sign-box{
+  font-family: var(--main-font);
+  background-color: var(--main-background-color);
+  border-radius: 20px;
+  width:33%;
+  height:400px;
+  margin-left: 33%;
+  text-align: center;
+  padding:50px;
+}
+
+.sign-header{
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.sign-button{
+  width:150px;
+  height:50px;
+  background: #f6f6f6;
+  border: none;
+  padding:10px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  color:var(--main-text-color)
+}
+
+.sign-button:hover{
+  background-color: var(--main-text-color);
+  color:#f6f6f6;
+}
 
 /* media queries */
 @media screen and (max-width:850px){
