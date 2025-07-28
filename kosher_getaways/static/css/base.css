@@ -1027,6 +1027,8 @@ thead{
     cursor: pointer;
     bottom:40px;
     font-family: var(--main-font);
+    position: relative;
+    z-index: 0;
   }
 
   .remove{
