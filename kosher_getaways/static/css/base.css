@@ -267,6 +267,7 @@ footer{
   bottom:40px;
   z-index: 3;
   left:320px;
+  font-family: var(--main-font);
 }
 
 .search-icon{
@@ -586,7 +587,8 @@ input::-webkit-inner-spin-button {
 .featured-image{
   width:270px;
   height:220px;
-  /* align-items: center; */
+  object-fit: cover;
+  display: block;
   border-radius: 20px;
 }
 
@@ -1024,7 +1026,7 @@ thead{
     border: solid rgba(112, 112, 112, 0.3) 0.3px;
     cursor: pointer;
     bottom:40px;
-    
+    font-family: var(--main-font);
   }
 
   .remove{
