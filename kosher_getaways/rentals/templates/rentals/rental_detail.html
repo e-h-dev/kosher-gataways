@@ -54,7 +54,7 @@
     </div>
     <hr style="width:80%; position: relative;">
 </div>
-<div class="availability-container shadow" id="availability">
+<div class="shadow" id="availability-container">
     Availability
 </div>
 <section>
@@ -101,11 +101,11 @@
     window.onscroll = function() {makeRelative()};
 
     function makeRelative(){
-        if (document.documentElement.scrollTop > 950){
-            document.getElementById('availability').style.display="none"
+        if (document.scrollTop > 850){
+            document.getElementById('availability-container').style.position="relative"
         }
         else{
-            document.getElementById('availability').style.display="block"
+            document.getElementById('availability-container').style.position="sticky"
         }
         
     }

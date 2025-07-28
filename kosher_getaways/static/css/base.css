@@ -875,7 +875,7 @@ thead{
 }
 
 
-.availability-container{
+#availability-container{
   position:sticky;
   top:80px;
   width:30%;
